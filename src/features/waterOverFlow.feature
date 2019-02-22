@@ -8,4 +8,4 @@ Feature:Water Over Flow
 
     Examples:
       |k  | i | j |output|
-      | 1 | 2 | 3 | 2    |
+      | 500 | 1 | 1 | 250    |

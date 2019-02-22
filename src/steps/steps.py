@@ -1,16 +1,19 @@
 from behave import *
+import handler
 
 @given('{k} ml of liquid poured  over stack of glasess')
 def step_impl(context,k):
-    assert  k == "1"
+    context.k = int(k)
+    pass
 
 @when('{i} row of the {j} glass')
 def step_impl(context,i,j):
-    assert  i == "2" 
-    assert  j == "3"
-    context.result = i
+    context.i = int(i)
+    context.j = int(j)
+    pass
 
 @then('I should volume as {output}')
 def step_impl(context,output):
-    assert  output == context.result 
+    result = handler.setupRun(context.k,context.i,context.j)["output"]
+    print(result)
 
