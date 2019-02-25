@@ -30,10 +30,15 @@ Solution to the Plexus code challenge
 Expected output
 
 For volume: 250 ml   rows: 0     glass : 0
+
 result :  {
+
     "output": 250,
+
     "validation_message": "Valid input",
+    
     "validation_status": "SUCCESSFUL"
+
 }
 
 ### Deliverables
