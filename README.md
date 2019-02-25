@@ -1,5 +1,5 @@
 # Plexus-Coding-Challenge
-Solution to the Plexus code chalenge
+Solution to the Plexus code challenge
 
 ## Table of contents:
 
@@ -15,19 +15,20 @@ Solution to the Plexus code chalenge
 
 ## Description
 
-* There is a stack of water glasses in a form of triangle. Each glass has a 250ml capacity.
-When a liquid is poured into the top most glass any overflow is evenly distributed between the glasses in the next row. That is, half of the overflow pours into the left glass while the remainder of the overflow pours into the right glass.
+* There is a stack of water glasses in the form of a triangle. Each glass has a 250ml capacity. When a liquid is poured into the top most glass any overflow is evenly distributed between the glasses in the next row. That is, half of the overflow pours into the left glass while the remainder of the overflow pours into the right glass.
 
 ### Constraints
 
-* The glass in the row to be seleted to find the volume must me lessa than or equal to the number of rows of the stack.
+* To find the volume of a selected glass in the given row must me less than or equal to the number of rows of the stack.
 
 ### Example Input and Output:
 
 #### Example
 
   ```python3 handler.py -k 250 -i 0 -j 0```
+
 Expected output
+
 For volume: 250 ml   rows: 0     glass : 0
 result :  {
   "output": 250,
@@ -67,6 +68,6 @@ And you're ready to go!
 
 ### Considerations about the development:
 
-* Since the application is about calculating the volume of glasses arraged in a triang1led stack. This problem can be solved by considering that every top glass fills the bottom 2 glasss which support it when its overflowed.
+* The application is about calculating the volume of glasses arranged in a triangled stack.To solve the problem consideration needs to be given to the fact that, when filled, the top glass overflows to the two glasses directly beneath it.
 
-* This follows the [pascal triangle](https://en.wikipedia.org/wiki/Pascal%27s_triangle)pattern, but since we start from the zero row and zero glass, the equation didn't seem to work. to overcome this problem, I incremented the input
+* This follows the pattern of a pascal triangle which provides that each number in the triangle is the sum of the two numbers directly above it. However in this problem the initial number in the first glass has a value of zero, whereas the pascal triangle equation assumes the the first entry is equal to 1. To overcome this problem, I added 1 to the input given.
