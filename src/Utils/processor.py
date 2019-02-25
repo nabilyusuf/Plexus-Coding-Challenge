@@ -6,7 +6,6 @@ def liquid_in_the_given_glass(volume, rows, glass_number):
     if (result.get("validation_status") != "ERROR"):
         filled_glasses = pour_liquid_over_stack_of_glasses(rows+1, volume)
         result["output"] = filled_glasses[glass_number+the_last_row(rows)]
-        print(filled_glasses)
     return result
 
 def the_last_row(rows):
